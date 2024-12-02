@@ -6,7 +6,7 @@ from time import time
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument("year", type=int, choices=range(2015, 2024))
+    parser.add_argument("year", type=int, choices=range(2015, 2025))
     parser.add_argument("day", type=int, choices=range(1, 26))
     parser.add_argument("-s", "--skip", action="store_true", help="skip executing the first part")
     args = parser.parse_args()
