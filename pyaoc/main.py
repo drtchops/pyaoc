@@ -1,6 +1,7 @@
 import sys
 from argparse import ArgumentParser
 from importlib import import_module
+from time import time
 
 
 def main():
@@ -23,15 +24,23 @@ def main():
             print("No solution found for part 1")
             sys.exit(1)
 
+        print()
         print("Part 1:")
+        t = time()
         solution.part1()
+        d = time() - t
+        print(f"Elapsed time: {d:.3f}s")
 
     if not hasattr(solution, "part2"):
         print("No solution found for part 2")
         sys.exit(1)
 
+    print()
     print("Part 2:")
+    t = time()
     solution.part2()
+    d = time() - t
+    print(f"Elapsed time: {d:.3f}s")
 
 
 if __name__ == "__main__":
