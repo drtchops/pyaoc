@@ -5,6 +5,8 @@ def parse() -> tuple[list[int], list[int]]:
     left_ids: list[int] = []
     right_ids: list[int] = []
     for line in INPUT.splitlines():
+        if not line:
+            continue
         left_num, right_num = line.split()
         left_ids.append(int(left_num))
         right_ids.append(int(right_num))
@@ -20,14 +22,15 @@ def part1() -> None:
     print(distance)
 
 
-def part2():
+def part2() -> None:
     left_ids, right_ids = parse()
     right_counts = Counter(right_ids)
     similarity = sum(left_id * right_counts[left_id] for left_id in left_ids)
     print(similarity)
 
 
-INPUT = """37033   48086
+INPUT = """
+37033   48086
 80098   34930
 88073   69183
 54342   63061
@@ -1026,4 +1029,5 @@ INPUT = """37033   48086
 90099   15951
 33595   70999
 19173   20622
-12964   56430"""
+12964   56430
+"""
