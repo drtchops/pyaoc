@@ -31,7 +31,6 @@ def part2():
         first = to_int(digits[0])
         last = to_int(digits[-1])
         total += int(f"{first}{last}")
-        print(line, int(f"{first}{last}"))
     print(total)
 
 
