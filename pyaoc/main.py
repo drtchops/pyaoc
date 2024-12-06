@@ -21,7 +21,7 @@ def _get_kwargs(solution: ModuleType, year: str, day: str) -> dict[str, Any]:
         print("Cannot find puzzle input file")
         sys.exit(1)
     with open(input_filename) as f:
-        return {"puzzle_input": f.read()}
+        return {"puzzle_input": f.read().strip()}
 
 
 def _run_part(solution: ModuleType, part: Literal[1] | Literal[2], **kwargs: dict[str, Any]):
