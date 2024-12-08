@@ -10,6 +10,9 @@ class Point:
     def __add__(self, other: "Point") -> Self:
         return self.__class__(self.x + other.x, self.y + other.y)
 
+    def __sub__(self, other: "Point") -> Self:
+        return self.__class__(self.x - other.x, self.y - other.y)
+
 
 def gcd(a: int, b: int) -> int:
     while b != 0:
