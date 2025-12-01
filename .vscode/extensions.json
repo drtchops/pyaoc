@@ -5,8 +5,8 @@
   // List of extensions which should be recommended for users of this workspace.
   "recommendations": [
     "ms-python.python",
-    "ms-python.vscode-pylance",
     "ms-python.debugpy",
+    "detachhead.basedpyright",
     "tamasfe.even-better-toml",
     "charliermarsh.ruff"
   ],

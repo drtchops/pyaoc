@@ -8,7 +8,6 @@ from typing import Any, Literal
 
 
 def _get_kwargs(solution: ModuleType, year: str, day: str) -> dict[str, Any]:
-    solution.__package__
     if int(year) < 2024:
         return {}
 
@@ -40,7 +39,7 @@ def _run_part(solution: ModuleType, part: Literal[1] | Literal[2], **kwargs: dic
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument("year", type=int, choices=range(2015, 2025))
+    parser.add_argument("year", type=int, choices=range(2015, 2026))
     parser.add_argument("day", type=int, choices=range(1, 26))
     parser.add_argument("-s", "--skip", action="store_true", help="skip executing the first part")
     args = parser.parse_args()

@@ -2,6 +2,6 @@
 
 Python solutions for Advent of Code
 
-### Usage
+## Usage
 
-`./aoc <year(2015-2024)> <day(1-25)>`
+`./aoc <year(2015-2025)> <day(1-25)>`
