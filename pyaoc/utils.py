@@ -7,10 +7,10 @@ class Point:
     x: int = 0
     y: int = 0
 
-    def __add__(self, other: "Point") -> Self:
+    def __add__(self, other: Point) -> Self:
         return self.__class__(self.x + other.x, self.y + other.y)
 
-    def __sub__(self, other: "Point") -> Self:
+    def __sub__(self, other: Point) -> Self:
         return self.__class__(self.x - other.x, self.y - other.y)
 
 

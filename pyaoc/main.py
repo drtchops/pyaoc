@@ -23,7 +23,7 @@ def _get_kwargs(solution: ModuleType, year: str, day: str) -> dict[str, Any]:
         return {"puzzle_input": f.read().strip()}
 
 
-def _run_part(solution: ModuleType, part: Literal[1] | Literal[2], **kwargs: dict[str, Any]):
+def _run_part(solution: ModuleType, part: Literal[1] | Literal[2], **kwargs: dict[str, Any]) -> None:
     func = getattr(solution, f"part{part}", None)
     if not func:
         print(f"No solution found for part {part}")
@@ -37,7 +37,7 @@ def _run_part(solution: ModuleType, part: Literal[1] | Literal[2], **kwargs: dic
     print(f"Elapsed time: {d:.3f}s")
 
 
-def main():
+def main() -> None:
     parser = ArgumentParser()
     parser.add_argument("year", type=int, choices=range(2015, 2026))
     parser.add_argument("day", type=int, choices=range(1, 26))
