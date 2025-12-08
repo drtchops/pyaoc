@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from math import sqrt
 from typing import Self
 
 
@@ -12,6 +13,25 @@ class Point:
 
     def __sub__(self, other: Point) -> Self:
         return self.__class__(self.x - other.x, self.y - other.y)
+
+    def distance(self, other: Point) -> float:
+        return sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2)
+
+
+@dataclass(frozen=True)
+class Point3D:
+    x: int = 0
+    y: int = 0
+    z: int = 0
+
+    def __add__(self, other: Point3D) -> Self:
+        return self.__class__(self.x + other.x, self.y + other.y, self.z + other.z)
+
+    def __sub__(self, other: Point3D) -> Self:
+        return self.__class__(self.x - other.x, self.y - other.y, self.z - other.z)
+
+    def distance(self, other: Point3D) -> float:
+        return sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2 + (self.z - other.z) ** 2)
 
 
 def gcd(a: int, b: int) -> int:
